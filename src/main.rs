@@ -66,7 +66,7 @@ fn main(){
     let mut x;
     let mut y;
     while poss.len() > 0{
-        println!("{}", last);
+        println!("My guess is {}", last);
         let mut input = String::new();
         io::stdin().read_line(&mut input).unwrap();
         let mut n: i32 = input.trim().parse().unwrap();
@@ -79,7 +79,6 @@ fn main(){
         }
         poss.retain(|&i| check1(last, i) == x && check2(last, i) == y);
         last = poss[0];
-        
     }
 
 }
